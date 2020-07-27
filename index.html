@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles//style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <title>CSS Trick</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            Logo
+        </div>
+        <div class="menu">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+        <div class="menu-btn">
+            <i  id="open-btn" class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        CONTENT OF OUR PAGE
+    </div>
+    <div class="sidebar translate">
+        <div class="close-btn">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="sidebar-content">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </div>
+    <script>
+        let menuBtn = document.querySelector('#open-btn');
+        let sidebar = document.querySelector('.sidebar');
+        let closeBtn = document.querySelector('.close-btn');
+        menuBtn.onclick = () =>{
+            sidebar.setAttribute("class","sidebar")
+        }
+
+        closeBtn.onclick = () =>{
+            sidebar.setAttribute("class","sidebar translate")
+        }
+        window.addEventListener("resize", () =>{
+            sidebar.setAttribute("class","sidebar translate")
+        })
+    </script>
+</body>
+</html>

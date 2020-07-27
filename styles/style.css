@@ -1,0 +1,104 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: #086ad8;
+    color: white;
+}
+.logo{
+    flex : 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 30px;
+}
+.menu{
+    flex : 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+.menu-btn{
+    flex : 1;
+    font-size: 40px;
+    justify-content: flex-end;
+    padding-right: 40px;
+    align-items: center;
+    display: none;
+}
+.menu-btn > i{
+    cursor: pointer;
+    color: white;
+}
+
+.item{
+cursor: pointer;
+}
+.content{
+    background-color: #f0f3f7;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 20px;
+}
+.sidebar{
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width : 60vw;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-around;
+    transition: 1s;
+    display: none;
+    color: #086ad8;
+
+}
+.translate{
+    transform: translateX(460px);
+}
+.sidebar-content{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex : 8;
+}
+.close-btn{
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   font-size: 40px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width :800px){
+    .menu-btn{
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
+    .sidebar{
+        display: flex;
+    }
+}
