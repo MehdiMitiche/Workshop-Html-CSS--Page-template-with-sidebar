@@ -43,14 +43,15 @@ body {
   cursor: pointer;
 }
 .content {
-  background-color: #f0f3f7;
+  background-color: green;
   position: relative;
   top: 10vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 90vh;
   font-size: 20px;
+  width: 100vw;
+  overflow: hidden;
 }
 .sidebar {
   background-color: white;
@@ -87,6 +88,35 @@ body {
   width: 100%;
   font-size: 40px;
   cursor: pointer;
+}
+
+.carousel {
+  background-color: red;
+  height: 100%;
+  width: 300vw;
+  display: flex;
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.carousel-img {
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+}
+#img1 {
+  background-color: aqua;
+}
+#img2 {
+  background-color: red;
+}
+#img3 {
+  background-color: green;
 }
 
 @media screen and (max-width: 800px) {
